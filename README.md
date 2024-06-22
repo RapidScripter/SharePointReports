@@ -2,7 +2,7 @@
 
 ## Description
 
-This PowerShell script connects to the SharePoint Online Admin Center and retrieves information about site owners, storage quotas, and SharePoint groups for each site collection. It then exports this data into separate Excel files (.CSV).
+This PowerShell script automates data retrieval from the SharePoint Online Admin Center. It efficiently gathers essential information such as site owners, storage quotas, and SharePoint groups for every site collection within your SharePoint environment. The script streamlines this process by exporting the collected data into individual CSV files, providing comprehensive insights that can be easily analyzed or integrated into broader reporting and management workflows. This automation enhances administrative efficiency and ensures accurate documentation of key SharePoint infrastructure details.
 
 ## Parameters
 
@@ -10,9 +10,18 @@ This PowerShell script connects to the SharePoint Online Admin Center and retrie
 
 ## Prerequisites
 
-1. **SharePoint Online Management Shell module**: Install using `Install-Module -Name Microsoft.Online.SharePoint.PowerShell` if not already installed. 
-2. **PnP PowerShell module**: Install using `Install-Module -Name "PnP.PowerShell" -AllowClobber -Force` and `Import-Module PnP.PowerShell` if not already installed.
-3. **Microsoft.Graph module**: Install using `Install-Module Microsoft.Graph -Scope CurrentUser` if not already installed.
+1. **SharePoint Online Management Shell module**: Install using:
+   ```powershell
+   Install-Module -Name Microsoft.Online.SharePoint.PowerShell
+
+2. **PnP PowerShell module**: Install using: 
+   ```powershell
+   Install-Module -Name "PnP.PowerShell" -AllowClobber -Force
+   Import-Module PnP.PowerShell
+
+3. **Microsoft.Graph module**: Install using:
+   ```powershell
+   Install-Module Microsoft.Graph -Scope CurrentUser
 
 ## Installation - Usage
 
@@ -30,24 +39,18 @@ This PowerShell script connects to the SharePoint Online Admin Center and retrie
 
 ## Script Details
 
-### Parameters
-
-- **AdminCenterURL:** The URL of the SharePoint Online Admin Center.
-
-- **Functions**
-
-#### 1. Get Site Owners
+### 1. Get Site Owners
 
 - Connects to SharePoint Online and Azure AD.
 - Retrieves site owners for each site collection.
 - Exports site owners' data to a CSV file.
 
-#### 2. Get Site Storage Details
+### 2. Get Site Storage Details
 
 - Retrieves storage quota and usage details for each site collection.
 - Exports storage data to a CSV file.
 
-#### 3. Get Site Groups
+### 3. Get Site Groups
 
 - Retrieves groups and their details for each site collection.
 - Exports groups data to a CSV file.
