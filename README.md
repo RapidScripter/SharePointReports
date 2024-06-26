@@ -27,7 +27,7 @@ This PowerShell script automates data retrieval from the SharePoint Online Admin
 
 1. Clone or download the script.
    ```bash
-   git clone https://github.com/RapidScripter/SharePointReports
+   git clone https://github.com/RapidScripter/SharePointReports.git
 
 2. Open PowerShell with Administrator privileges.
 
